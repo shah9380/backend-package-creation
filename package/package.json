@@ -1,6 +1,6 @@
 {
-  "name": "@backend-package-creation/shah-coder",
-  "version": "1.0.0",
+  "name": "shah-coder",
+  "version": "1.0.1",
   "description": "is the string coder?",
   "main": "index.js",
   "scripts": {
@@ -8,11 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shah9380/backend-package-creation/tree/main/package"
+    "url": "git+https://github.com/shah9380/backend-package-creation.git#main"
   },
   "keywords": [
     "shah"
   ],
   "author": "misbah",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shah9380/backend-package-creation/issues"
+  },
+  "homepage": "https://github.com/shah9380/backend-package-creation/tree/main#readme"
 }
