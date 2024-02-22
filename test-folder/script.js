@@ -1,3 +1,5 @@
-const code = require('shah-coder');
+const binaryFind = require('binary-package');
 
-console.log(code('SHAH'));
+const index =  binaryFind.ascend([2, 3, 4, 10, 40],10);
+
+console.log("Element found at", index);
