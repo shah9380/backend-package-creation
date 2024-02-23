@@ -13,7 +13,7 @@ const getData = async () => {
 	try {
 		// Getting data from response object sent by axios
 		const { data } = await axios.get(
-			`https://nirzon47.github.io/html-datasets/job-posting-data.html`,
+			`https://github.com/shah9380/mypage/blob/main/data.html`,
 			{
 				headers: {
 					// Setting content type as html so cheerio can parse it
