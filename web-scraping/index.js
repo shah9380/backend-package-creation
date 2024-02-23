@@ -4,11 +4,6 @@ import { utils, writeFile } from 'xlsx'
 
 const jobs = []
 
-/**
- * Asynchronous function to retrieve data from a specified URL, parse the HTML content, extract job postings, and write the data to an Excel file.
- *
- * @return {Promise} The retrieved data from the specified URL, parsed and written to an Excel file.
- */
 const getData = async () => {
 	try {
 		// Getting data from response object sent by axios
