@@ -2,13 +2,18 @@ import axios from 'axios'
 import { load } from 'cheerio'
 import { utils, writeFile } from 'xlsx'
 
-const jobs = []
+const products = []
 
+/**
+ * Asynchronous function to retrieve data from a specified URL, parse the HTML content, extract job postings, and write the data to an Excel file.
+ *
+ * @return {Promise} The retrieved data from the specified URL, parsed and written to an Excel file.
+ */
 const getData = async () => {
 	try {
 		// Getting data from response object sent by axios
 		const { data } = await axios.get(
-			`https://www.quikr.com/jobs/job+zwqxj1519612219`,
+			`https://shah9380.github.io/mypage/data.html`,
 			{
 				headers: {
 					// Setting content type as html so cheerio can parse it
@@ -34,11 +39,11 @@ const getData = async () => {
 				description: $(element).find('.job-description').text(),
 			}
 
-			jobs.push(product)
+			products.push(product)
 		})
 
 		const workbook = utils.book_new() // Creating a new workbook
-		const worksheet = utils.json_to_sheet(jobs) // Creating a new worksheet with the extracted data
+		const worksheet = utils.json_to_sheet(products) // Creating a new worksheet with the extracted data
 		utils.book_append_sheet(workbook, worksheet, 'Sheet 1') // Adding the worksheet to the workbook
 		writeFile(workbook, 'job.xlsx') // Writing the workbook to an Excel file
 	} catch (error) {
@@ -47,3 +52,6 @@ const getData = async () => {
 }
 
 getData()
+
+
+
